@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: postgres
+  host: localhost
+
+development:
+  <<: *default
+  database: tile_collections_development
+
+test:
+  <<: *default
+  database: tile_collections_test
+
+production:
+  <<: *default
+  database: tile_collections_production
